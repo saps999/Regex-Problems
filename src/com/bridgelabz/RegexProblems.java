@@ -24,5 +24,9 @@ public class RegexProblems {
         System.out.println("Result : " + email);
 
         System.out.println(" ");
+
+        System.out.print("Enter your Mobile number: ");
+        boolean mobileNo = Pattern.matches("[0-9]{1,15}\s[9876]{1}[0-9]{9}", sc.nextLine());
+        System.out.println("Result : " + mobileNo);
     }
 }
