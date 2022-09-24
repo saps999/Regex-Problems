@@ -40,5 +40,11 @@ public class RegexProblems {
         System.out.println("Result : " + mobileNo);
 
         System.out.println(" ");
+        /*
+        Password must be minimum of 8 character
+         */
+        System.out.print("Enter your Password: ");
+        boolean password = Pattern.matches("[a-zA-Z0-9]{8,}", sc.next());
+        System.out.println("Result : " + password);
     }
 }
