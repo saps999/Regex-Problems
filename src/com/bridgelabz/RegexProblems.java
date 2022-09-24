@@ -22,5 +22,7 @@ public class RegexProblems {
         System.out.print("Enter your e-mail id: ");
         boolean email = Pattern.matches("[a-zA-Z0-9]+[@][a-zA-Z]{3,15}[.][a-zA-Z]{2,5}", sc.next());
         System.out.println("Result : " + email);
+
+        System.out.println(" ");
     }
 }
