@@ -11,7 +11,7 @@ public class RegexProblems {
         First name starts with Cap and has minimum 3 characters
          */
         System.out.print("Enter First name: ");
-        boolean firstName = Pattern.matches("[A-Z][a-z]{3,}", sc.next());
+        boolean firstName = Pattern.matches("[A-Z][a-z]{2,}", sc.next());
         System.out.println("Result : " + firstName);
 
         System.out.println(" ");
@@ -19,7 +19,7 @@ public class RegexProblems {
         Last name starts with Cap and has minimum 3 characters
          */
         System.out.print("Enter last name: ");
-        boolean lastName = Pattern.matches("[A-Z][a-z]{3,}", sc.next());
+        boolean lastName = Pattern.matches("[A-Z][a-z]{2,}", sc.next());
         System.out.println("Result : " + lastName);
 
         System.out.println(" ");
@@ -36,15 +36,16 @@ public class RegexProblems {
          */
 
         System.out.print("Enter your Mobile number: ");
-        boolean mobileNo = Pattern.matches("[0-9]{1,15}\s[9876]{1}[0-9]{9}",scanner.nextLine());
+        boolean mobileNo = Pattern.matches("[0-9]{1,3}\s[9876]{1}[0-9]{9}",scanner.nextLine());
         System.out.println("Result : " + mobileNo);
 
         System.out.println(" ");
         /*
-        Password must be minimum of 8 character
+        Password must be minimum of 8 character.
+        at least one upper-case.
          */
         System.out.print("Enter your Password: ");
-        boolean password = Pattern.matches("[a-zA-Z0-9]{8,}", sc.next());
+        boolean password = Pattern.matches("^(?=.*[a-z])(?=.*[A-Z]).{8,20}$", sc.next());
         System.out.println("Result : " + password);
     }
 }
